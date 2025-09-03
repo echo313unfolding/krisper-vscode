@@ -4,6 +4,11 @@
     "description": "Write code in plain English. No syntax required.",
     "version": "0.1.0",
     "publisher": "echo-labs",
+    "author": {
+        "name": "Joshua Fellows",
+        "email": "joshua@echolabs.systems"
+    },
+    "contributors": [],
     "icon": "icon.png",
     "engines": {
         "vscode": "^1.74.0"

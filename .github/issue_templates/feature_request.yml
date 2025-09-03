@@ -1,0 +1,45 @@
+name: Feature Request
+description: Suggest an idea for KRISPER
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature!
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What would you like KRISPER to do?
+      placeholder: I'd like to be able to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this feature help you?
+      placeholder: This would help when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Example KRISPER Code
+      description: Show us how you'd like to write this in KRISPER
+      placeholder: |
+        compress file "data.txt" as backup
+        encrypt backup with key="secret"
+      render: krisper
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Contribution
+      description: Would you be interested in implementing this?
+      options:
+        - label: I'd be willing to submit a PR for this feature

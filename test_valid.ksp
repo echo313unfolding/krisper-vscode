@@ -1,0 +1,3 @@
+// Valid KRISPER test
+compress payload "Hello KRISPER!" using algorithm="gzip" as message
+export message to "output.json"

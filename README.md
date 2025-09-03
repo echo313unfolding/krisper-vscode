@@ -1,104 +1,77 @@
-# KRISPER for VS Code
-
 <p align="center">
   <img src="branding/krisper_readme_intro.svg" alt="KRISPER — English → IR → Execution" />
 </p>
 
-Write code in plain English directly in VS Code!
+# KRISPER — Natural Language Programming (Copilot-friendly)
 
-## Features
+Write programs in **plain English**. No brackets. No boilerplate.  
+KRISPER turns intent into a small IR and executes it locally.  
+Works **alongside GitHub Copilot** (we keep suggestions low-noise).
 
-### 🧬 Natural Language Programming
-![Demo](images/demo.gif)
-
-Write:
-```krisper
-compress file "data.txt" as backup
-compare backup with original
-if different: alert user
+## ✨ What you can do
+- `compress payload "Hello" using seed=42 as greeting`
+- `hash greeting as checksum`
+- `compare greeting with expected_value`
+- Bio_Poetica events:  
+```
+when user clicks button:
+  emit "sparkle" {"color":"gold"}
+  grow happiness by 10
 ```
 
-Get executable code!
+## 🚀 Quick Start
+1. Install the extension.
+2. (Optional) Set env vars if your compiler lives elsewhere:
+   - `KRISPER_REPO=/path/to/krisper_github`
+   - `KRISPER_PYTHON=/path/to/python3`
+3. **Ctrl+Shift+P → "KRISPER: Open Quickstart"**  
+4. **Ctrl+Shift+K** to **Compile Current File** → IR panel  
+5. **Ctrl+Shift+Enter** to **Execute Current File** → Run Log panel
 
-### 🎨 Bio_Poetica Poetry Support
-```biopoetica
-when user saves file:
-    emit "autosave" {"timestamp": now}
-    compress changes as backup
-```
-
-### ✨ Features
-- Syntax highlighting for .ksp and .bio files
-- Real-time compilation to JSON IR
-- Execute directly from VS Code
-- IntelliSense for common patterns
-- Snippets for quick starts
-
-## Usage
-
-1. Create a file with `.ksp` or `.bio` extension
-2. Write in plain English
-3. Press `Ctrl+Shift+K` to compile
-4. See the JSON output in the side panel
-
-## Example
-
-```krisper
-// data_processor.ksp
-load csv file "sales.csv" as data
-filter data where amount > 1000 as high_value
-sort high_value by date descending
-export high_value to "report.json"
-```
-
-## Installation
-
-1. Install from VS Code Marketplace: search "KRISPER"
-2. Or install manually: `code --install-extension krisper-0.1.0.vsix`
-
-## Requirements
-
-- VS Code 1.74.0+
-- Python 3.8+ (for execution)
-
-## Commands
-
-- `KRISPER: Compile Current File` - Convert natural language to IR
-- `KRISPER: Execute Current File` - Run the compiled code
-- `KRISPER: Explain Selection` - Explain what selected code does
-- `KRISPER: Open Quickstart` - Open a sample file
-- `KRISPER: Toggle Inline Completions` - Toggle KRISPER suggestions
-
-## Keybindings
-
-- `Ctrl+Shift+K` / `Cmd+Shift+K` - Compile current file
-- `Ctrl+Shift+Enter` / `Cmd+Shift+Enter` - Execute current file
-- `Ctrl+Shift+.` / `Cmd+Shift+.` - Explain selection
-
-## Copilot Compatibility
-KRISPER plays nicely with GitHub Copilot.
+## 🤝 Copilot Compatibility
+KRISPER plays nice with Copilot—Copilot leads; we add tiny verb scaffolds.
 
 Enable Copilot for our languages:
-
 ```json
 {
-  "github.copilot.enable": {
-    "*": true,
-    "krisper": true,
-    "biopoetica": true
-  },
+  "github.copilot.enable": { "*": true, "krisper": true, "biopoetica": true },
   "github.copilot.editor.enableAutoCompletions": true
 }
 ```
 
-Use **KRISPER: Toggle Inline Completions** to switch our tiny scaffolds on/off. We let Copilot take the lead; KRISPER adds low-noise verb scaffolds and one-shot commands (Quickstart, Compile, Execute).
+Toggle KRISPER's own inline hints via the status bar (**KRISPER ✦/⭘**) or command:
+**"KRISPER: Toggle Inline Completions"**.
 
-## Coming Soon
+## 🧰 Commands
 
-- Live preview panel
-- Debugging support
-- More language patterns
-- GitHub Copilot integration
+* **KRISPER: Open Quickstart** — insert sample
+* **KRISPER: Compile Current File** — English → IR
+* **KRISPER: Execute Current File** — run plan locally
+* **KRISPER: Explain Selection** — readable steps
+* **KRISPER: Toggle Inline Completions** — on/off
+
+## ⌨️ Keybindings
+
+* Compile: **Ctrl+Shift+K** / **Cmd+Shift+K**
+* Execute: **Ctrl+Shift+Enter** / **Cmd+Shift+Enter**
+* Explain: **Ctrl+Shift+.** / **Cmd+Shift+.**
+
+## 📸 Screenshots
+
+* `images/quickstart.png` — Quickstart file open
+* `images/compile.png` — IR webview
+* `images/execute.png` — Run Log webview
+* `images/copilot.png` — Copilot + KRISPER suggestions together
+
+## 🔒 Privacy
+
+All compilation/execution happens locally. No external calls.
+
+## 🗺️ Roadmap
+
+* Verb hover docs (rich examples)
+* Diagnostics & quick fixes for unknown verbs
+* Live preview panel
 
 ---
 

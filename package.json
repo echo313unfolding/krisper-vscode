@@ -10,15 +10,18 @@
     },
     "categories": [
         "Programming Languages",
-        "Snippets",
         "Other"
     ],
     "keywords": [
+        "krisper",
+        "bio_poetica",
+        "dsl",
         "natural language",
         "english",
-        "krisper",
-        "no syntax",
-        "plain english"
+        "compiler",
+        "ir",
+        "copilot",
+        "productivity"
     ],
     "activationEvents": [
         "onLanguage:krisper",
@@ -44,14 +47,26 @@
         "languages": [
             {
                 "id": "krisper",
-                "aliases": ["KRISPER", "krisper"],
-                "extensions": [".ksp", ".krisper"],
+                "aliases": [
+                    "KRISPER",
+                    "krisper"
+                ],
+                "extensions": [
+                    ".ksp",
+                    ".krisper"
+                ],
                 "configuration": "./language-configuration.json"
             },
             {
                 "id": "biopoetica",
-                "aliases": ["Bio Poetica", "biopoetica"],
-                "extensions": [".bio", ".poem"],
+                "aliases": [
+                    "Bio Poetica",
+                    "biopoetica"
+                ],
+                "extensions": [
+                    ".bio",
+                    ".poem"
+                ],
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -122,6 +137,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/echo313unfolding/krisper-vscode"
-    }
+        "url": "git+https://github.com/echo313unfolding/krisper-vscode.git"
+    },
+    "directories": {
+        "example": "examples"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/echo313unfolding/krisper-vscode/issues"
+    },
+    "homepage": "https://github.com/echo313unfolding/krisper-vscode#readme"
 }

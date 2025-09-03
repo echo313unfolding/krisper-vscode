@@ -1,0 +1,6 @@
+// Data processing example
+load csv file "sales.csv" as data
+filter data where amount > 1000 as high_value_sales
+sort high_value_sales by date descending
+compress high_value_sales as archive
+export archive to "monthly_report.json"

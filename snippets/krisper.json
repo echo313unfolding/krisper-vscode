@@ -1,0 +1,52 @@
+{
+    "Compress": {
+        "prefix": "compress",
+        "body": [
+            "compress ${1:data} using ${2:algorithm} as ${3:output}"
+        ],
+        "description": "Compress data with algorithm"
+    },
+    "Compare": {
+        "prefix": "compare",
+        "body": [
+            "compare ${1:value1} with ${2:value2}"
+        ],
+        "description": "Compare two values"
+    },
+    "Filter": {
+        "prefix": "filter",
+        "body": [
+            "filter ${1:data} where ${2:condition} as ${3:output}"
+        ],
+        "description": "Filter data by condition"
+    },
+    "Load File": {
+        "prefix": "load",
+        "body": [
+            "load ${1:type} file \"${2:path}\" as ${3:variable}"
+        ],
+        "description": "Load file into variable"
+    },
+    "If Statement": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition}:",
+            "    ${2:action}"
+        ],
+        "description": "If condition"
+    },
+    "Sort": {
+        "prefix": "sort",
+        "body": [
+            "sort ${1:data} by ${2:field} ${3|ascending,descending|}"
+        ],
+        "description": "Sort data by field"
+    },
+    "Export": {
+        "prefix": "export",
+        "body": [
+            "export ${1:data} to \"${2:filename}\""
+        ],
+        "description": "Export data to file"
+    }
+}

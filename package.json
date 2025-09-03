@@ -1,0 +1,127 @@
+{
+    "name": "krisper",
+    "displayName": "KRISPER - Natural Language Programming",
+    "description": "Write code in plain English. No syntax required.",
+    "version": "0.1.0",
+    "publisher": "echo-labs",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+        "Other"
+    ],
+    "keywords": [
+        "natural language",
+        "english",
+        "krisper",
+        "no syntax",
+        "plain english"
+    ],
+    "activationEvents": [
+        "onLanguage:krisper",
+        "onLanguage:biopoetica",
+        "onCommand:krisper.compileCurrent",
+        "onCommand:krisper.executeCurrent",
+        "onCommand:krisper.explainSelection",
+        "onCommand:krisper.quickstart",
+        "onCommand:krisper.toggleInline"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "KRISPER",
+            "properties": {
+                "krisper.inline.enabled": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Offer lightweight KRISPER inline completions (plays nice with Copilot)."
+                }
+            }
+        },
+        "languages": [
+            {
+                "id": "krisper",
+                "aliases": ["KRISPER", "krisper"],
+                "extensions": [".ksp", ".krisper"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "biopoetica",
+                "aliases": ["Bio Poetica", "biopoetica"],
+                "extensions": [".bio", ".poem"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "krisper",
+                "scopeName": "source.krisper",
+                "path": "./syntaxes/krisper.tmLanguage.json"
+            },
+            {
+                "language": "biopoetica",
+                "scopeName": "source.biopoetica",
+                "path": "./syntaxes/biopoetica.tmLanguage.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "krisper.quickstart",
+                "title": "KRISPER: Open Quickstart"
+            },
+            {
+                "command": "krisper.compileCurrent",
+                "title": "KRISPER: Compile Current File"
+            },
+            {
+                "command": "krisper.executeCurrent",
+                "title": "KRISPER: Execute Current File"
+            },
+            {
+                "command": "krisper.explainSelection",
+                "title": "KRISPER: Explain Selection"
+            },
+            {
+                "command": "krisper.toggleInline",
+                "title": "KRISPER: Toggle Inline Completions"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "krisper.compileCurrent",
+                "key": "ctrl+shift+k",
+                "mac": "cmd+shift+k",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "krisper.executeCurrent",
+                "key": "ctrl+shift+enter",
+                "mac": "cmd+shift+enter",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "krisper.explainSelection",
+                "key": "ctrl+shift+.",
+                "mac": "cmd+shift+.",
+                "when": "editorTextFocus"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "krisper",
+                "path": "./snippets/krisper.json"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/echo313unfolding/krisper-vscode"
+    }
+}

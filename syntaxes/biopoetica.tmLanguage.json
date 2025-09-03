@@ -1,0 +1,120 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Bio_Poetica",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#poetic"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.biopoetica",
+                    "match": "\\b(when|if|while|flows|becomes|transforms)\\b"
+                },
+                {
+                    "name": "keyword.operator.biopoetica",
+                    "match": "\\b(emit|resonate|breathe|pulse|flow|cascade|bloom|spiral|fold|unfold|compress|expand)\\b"
+                },
+                {
+                    "name": "keyword.other.biopoetica",
+                    "match": "\\b(as|with|through|into|from|within|beneath|above|between)\\b"
+                },
+                {
+                    "name": "constant.language.biopoetica",
+                    "match": "\\b(true|false|null|void|infinity|origin|now)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.biopoetica",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.biopoetica",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.biopoetica",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.biopoetica",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.biopoetica",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.flow.biopoetica",
+                    "match": "(→|←|↓|↑|⇄|~|≈)"
+                },
+                {
+                    "name": "keyword.operator.assignment.biopoetica",
+                    "match": ":"
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.biopoetica",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.biopoetica",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "poetic": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.poetic.biopoetica",
+                    "match": "^\\s{4,}.*$",
+                    "comment": "Indented lines as poetic flow"
+                },
+                {
+                    "name": "markup.italic.emphasis.biopoetica",
+                    "match": "\\*[^*]+\\*",
+                    "comment": "Emphasized poetic elements"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.biopoetica"
+}

@@ -1,0 +1,118 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "KRISPER",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.krisper",
+                    "match": "\\b(if|when|while|for|else|then)\\b"
+                },
+                {
+                    "name": "keyword.operator.krisper",
+                    "match": "\\b(compress|decompress|compare|filter|sort|load|save|export|import|emit|pack|unpack|encode|decode|transform|validate|analyze|optimize)\\b"
+                },
+                {
+                    "name": "keyword.other.krisper",
+                    "match": "\\b(as|with|using|from|to|where|by|into|and|or|not)\\b"
+                },
+                {
+                    "name": "constant.language.krisper",
+                    "match": "\\b(true|false|null|none|now|today|yesterday)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.krisper",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.krisper",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.krisper",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.krisper",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.krisper",
+                    "match": "\\b\\d+(\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.comparison.krisper",
+                    "match": "(==|!=|<=|>=|<|>|is|is not)"
+                },
+                {
+                    "name": "keyword.operator.assignment.krisper",
+                    "match": "="
+                },
+                {
+                    "name": "keyword.operator.arithmetic.krisper",
+                    "match": "(\\+|-|\\*|/|%)"
+                }
+            ]
+        },
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.krisper",
+                    "match": "//.*$"
+                },
+                {
+                    "name": "comment.block.krisper",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.krisper",
+                    "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+                }
+            ]
+        }
+    },
+    "scopeName": "source.krisper"
+}

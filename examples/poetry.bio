@@ -1,0 +1,8 @@
+when user saves file:
+    emit "autosave" {"timestamp": now}
+    compress changes as backup
+    
+when backup completes:
+    flow into archive
+    spiral through validation
+    bloom confirmation message

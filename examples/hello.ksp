@@ -1,0 +1,4 @@
+// Hello World in KRISPER
+compress payload "Hello World" using seed=42 as greeting
+compare greeting with expected_value
+export greeting to "output.json"

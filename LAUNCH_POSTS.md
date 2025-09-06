@@ -1,125 +1,164 @@
-# KRISPER Launch Posts
+# KRISPER Launch Posts - Ready to Copy/Paste! 🚀
 
-## Hacker News (Show HN)
+## Reddit r/vscode
+**Title:** I made a VS Code extension that lets you code in plain English - no syntax required!
 
-**Title:** Show HN: KRISPER – write programs in English (works with Copilot)
+**Post:**
+Hey r/vscode! 
 
-**Body:**
-Hi HN! I built KRISPER because I was tired of translating thoughts into syntax. 
+I just released KRISPER - a VS Code extension that lets you write code in plain English. 
 
-With KRISPER, you write:
+Instead of:
+```javascript
+const fs = require('fs');
+const data = fs.readFileSync('data.txt');
+const compressed = zlib.gzipSync(data);
+fs.writeFileSync('backup.gz', compressed);
+```
+
+You write:
 ```
 compress file "data.txt" as backup
-compare backup with original
 ```
 
-Instead of remembering APIs, brackets, and semicolons.
+Features:
+- ✅ Works alongside GitHub Copilot
+- ✅ Instant compilation (Ctrl+Shift+K)
+- ✅ Direct execution (Ctrl+Shift+Enter)
+- ✅ Multiple language backends
+- ✅ Bio_Poetica mode for artistic code
 
-Key points:
-- Works alongside GitHub Copilot (not a replacement)
-- Compiles to JSON intermediate representation
-- VS Code extension with syntax highlighting
-- Open source: https://github.com/echo313unfolding/KRISPER
+Install: `ext install echo-labs.krisper`
 
-Demo GIF: [link]
-VS Code Extension: [link]
+GitHub: https://github.com/echo313unfolding/KRISPER
 
-Would love your feedback on the approach and what verbs you'd want to see!
+Would love your feedback!
 
 ---
 
-## Reddit (r/programming)
-
-**Title:** I made a VS Code extension that lets you code in plain English (and it works with Copilot)
+## Reddit r/programming
+**Title:** Tired of syntax? I built a plain English programming language for VS Code
 
 **Post:**
-Hey r/programming!
+After years of watching beginners struggle with syntax, I built KRISPER - a natural language programming interface.
 
-Just released KRISPER - a natural language programming interface that transforms English into executable code.
+Example KRISPER code:
+```
+load csv file "sales.csv" as data
+filter data where amount > 1000 as high_value
+compress high_value as report
+email report to "boss@company.com"
+```
 
-**What it does:**
-- Write `compress data as backup` instead of complex compression APIs
-- One-keystroke compilation (Ctrl+Shift+K) to see the IR
-- Works WITH GitHub Copilot, not against it
-- Supports "Bio_Poetica" mode for poetic code
+It compiles to an intermediate representation (IR) that can execute across multiple backends.
 
-**Demo:** [GIF showing quickstart → compile → execute]
+The interesting part: it's deterministic (no AI), so the same English always produces the same code.
 
-**GitHub:** https://github.com/echo313unfolding/KRISPER  
-**VS Code:** [marketplace link]
+VS Code extension: `ext install echo-labs.krisper`
+GitHub: https://github.com/echo313unfolding/KRISPER
 
-The philosophy: Every programming language is just a bad translation layer between human thought and machine execution. KRISPER removes the translation.
-
-Happy to answer questions about the implementation or natural language parsing approach!
+Technical details in the repo. Curious what you think about natural language as a programming interface?
 
 ---
 
 ## Twitter/X Thread
-
 **Tweet 1:**
-Just shipped KRISPER 🚀
+🚀 Just launched KRISPER for VS Code!
 
 Write code in plain English:
-```
-compress file "data.txt" as backup
-```
+"compress all logs older than 7 days"
 
-No brackets. No semicolons. Just intent.
+No syntax. No semicolons. Just intent.
 
-Works WITH GitHub Copilot, not against it.
+Works with @GitHubCopilot too! 🤝
+
+Install: ext install echo-labs.krisper
 
 🧵👇
 
 **Tweet 2:**
 Traditional coding:
-- Remember syntax
-- Look up APIs  
-- Debug typos
+```js
+fs.readdirSync('./logs')
+  .filter(f => Date.now() - fs.statSync(f).mtime > 7*24*60*60*1000)
+  .forEach(f => compress(f))
+```
 
-KRISPER coding:
-- Write what you want
-- Press Ctrl+Shift+K
-- It runs
+KRISPER:
+```
+compress all logs older than 7 days
+```
 
-[15-second demo GIF]
+Same result. Zero syntax errors. 
 
 **Tweet 3:**
-Available now:
-✅ VS Code extension
-✅ Open source
-✅ Copilot-compatible
-✅ Poetry mode (Bio_Poetica)
+Perfect for:
+✅ Beginners learning to code
+✅ Quick scripts & automation  
+✅ Documenting what code does
+✅ Prototyping ideas fast
 
 GitHub: github.com/echo313unfolding/KRISPER
 
-The future: humans write intent, not syntax.
+#VSCode #Programming #NaturalLanguage #OpenSource
 
 ---
 
-## LinkedIn
+## Dev.to Article
+**Title:** How I Built a Plain English Programming Language for VS Code
 
-**Post:**
-🎯 Launching KRISPER: Natural Language Programming for VS Code
+**Tags:** #vscode #programming #opensource #showdev
 
-After months of development, I'm excited to share KRISPER - a tool that lets developers write code in plain English.
+I've always been frustrated watching smart people give up on coding because of syntax. So I built KRISPER - a VS Code extension that lets you write code in plain English.
 
-**The Problem:** We spend too much time translating ideas into syntax.
+## The Problem
+Every beginner struggles with:
+- Missing semicolons
+- Mismatched brackets  
+- Confusing error messages
+- Language-specific syntax
 
-**The Solution:** Write your intent directly:
-- "compress file as backup"
-- "filter data where amount > 1000"
-- "export results to json"
+## The Solution
+What if you could just write what you want?
 
-**Key Innovation:** KRISPER works alongside GitHub Copilot, enhancing AI-assisted development rather than replacing it.
+```krisper
+// KRISPER code
+compress file "report.pdf" using maximum compression
+upload compressed file to "backup.company.com"
+email link to "team@company.com" with subject "Report ready"
+```
 
-✅ VS Code extension now available
-✅ Open source on GitHub
-✅ JSON intermediate representation
-✅ One-click compilation and execution
+## How It Works
+1. **Parser**: Extracts intent from natural language
+2. **IR Compiler**: Converts to intermediate representation  
+3. **Executors**: Run the IR on various backends
+4. **VS Code Integration**: Syntax highlighting, compilation, execution
 
-This is just the beginning of making programming more accessible and intuitive.
+## Try It!
+Install: `ext install echo-labs.krisper`
 
-#Programming #OpenSource #DeveloperTools #Innovation #VSCode
+GitHub: https://github.com/echo313unfolding/KRISPER
 
-[Link to GitHub]
-[Link to VS Code Marketplace]
+I'd love to hear your thoughts on natural language programming!
+
+---
+
+## Hacker News
+**Title:** Show HN: KRISPER – Write code in plain English (VS Code extension)
+
+**Link:** https://github.com/echo313unfolding/KRISPER
+
+**Comment:**
+Hi HN! I built KRISPER to explore natural language as a programming interface. 
+
+It's not AI-based - it uses deterministic parsing to convert English to an intermediate representation (IR) that executes on multiple backends.
+
+The VS Code extension provides syntax highlighting, instant compilation (Ctrl+Shift+K), and direct execution.
+
+Interesting challenges solved:
+- Ambiguity resolution without AI
+- Maintaining determinism 
+- GitHub Copilot compatibility
+- Multi-language backend support
+
+Would love feedback on the approach!

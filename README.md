@@ -76,3 +76,16 @@ All compilation/execution happens locally. No external calls.
 ---
 
 Part of the [KRISPER](https://github.com/echo313unfolding/KRISPER) natural language programming project.
+
+## 🧬 Bio_Poetica Cross-Language Support
+
+Write poetic code that transforms into ANY programming language:
+
+```bio
+when user clicks button:
+    grow happiness by 10
+    emit sparkle with golden light
+    flow into next state
+```
+
+Transforms to Python, JavaScript, Rust, Go, and 15+ languages!

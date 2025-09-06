@@ -1,0 +1,29 @@
+// Bio_Poetica Cross-Language Example
+// This code works in ANY programming language!
+
+when database connects:
+    breathe life into connection
+    grow pool to 10 threads
+    emit "ready" with timestamp
+
+when request arrives:
+    branch on method:
+        if GET: flow data to client
+        if POST: absorb payload into memory
+        else: wilt with error 405
+
+// Biological computation
+function fibonacci evolves:
+    seed a = 0, b = 1
+    cycle 10 times:
+        bloom c from a + b
+        flow b to a
+        flow c to b
+    return final bloom
+
+// Event-driven poetry
+on error detected:
+    pulse red warning
+    cascade to error_handler
+    compress stacktrace as dna
+    spiral back to stable state

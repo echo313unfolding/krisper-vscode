@@ -4,10 +4,7 @@
     "description": "Write code in plain English. No syntax required.",
     "version": "0.1.0",
     "publisher": "echo-labs",
-    "author": {
-        "name": "Joshua Fellows",
-        "email": "joshua@echolabs.systems"
-    },
+    "author": "",
     "contributors": [],
     "icon": "icon.png",
     "engines": {
@@ -137,8 +134,7 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./"
+        "vscode:prepublish": "echo 'No compilation needed'"
     },
     "repository": {
         "type": "git",
@@ -147,10 +143,12 @@
     "directories": {
         "example": "examples"
     },
-    "author": "",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/echo313unfolding/krisper-vscode/issues"
     },
-    "homepage": "https://github.com/echo313unfolding/krisper-vscode#readme"
+    "homepage": "https://github.com/echo313unfolding/krisper-vscode#readme",
+    "devDependencies": {
+        "@vscode/vsce": "^3.6.0"
+    }
 }

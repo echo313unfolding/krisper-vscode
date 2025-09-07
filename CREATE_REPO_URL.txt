@@ -1,0 +1,8 @@
+CLICK THIS EXACT URL TO CREATE THE REPO:
+
+https://github.com/new?name=krisper-vscode&description=VS+Code+extension+for+KRISPER+-+Write+code+in+plain+English&public=true&owner=echo313unfolding
+
+This link pre-fills everything!
+Just click "Create repository" button.
+
+Then run: git push -u origin master

@@ -1,0 +1,37 @@
+// KRISPER + GitHub Copilot Demo
+// Watch Copilot suggest plain English code!
+
+// Example 1: File compression workflow
+compress all files in "documents/" as backup
+// Copilot suggests: → using maximum compression
+filter compressed files larger than 100MB
+// Copilot suggests: → as large_files
+upload large_files to "cloud.company.com"
+// Copilot suggests: → with progress bar
+
+// Example 2: Data analysis pipeline
+load json from "https://api.data.com/sales"
+// Copilot learns your style: → as sales_data
+filter sales_data where region = "North America"
+// Copilot suggests: → and revenue > 50000
+calculate average revenue per customer
+// Copilot suggests: → as avg_revenue
+export report to "quarterly_analysis.pdf"
+
+// Example 3: Email automation
+scan inbox for unread emails
+// Copilot suggests: → from last 24 hours
+extract attachments from important senders
+// Copilot suggests: → as attachment_list
+compress attachments larger than 10MB
+// Copilot suggests: → using zip format
+forward compressed files to "archive@company.com"
+
+// Example 4: Log management
+find all log files older than 30 days
+// Copilot pattern matches: → in "/var/log/"
+compress logs using gzip
+// Copilot suggests: → with timestamp suffix
+move compressed logs to "archive/2024/"
+// Copilot suggests: → and delete originals
+email summary to "admin@company.com"

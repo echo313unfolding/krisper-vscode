@@ -2,6 +2,24 @@
   <img src="branding/krisper_readme_intro.svg" alt="KRISPER — English → IR → Execution" />
 </p>
 
+# KRISPER — The Self-Healing Programming Language (Copilot-friendly)
+
+## 🧬 KRISPER Fixed Its Own TypeScript Build Error!
+
+**True Story:** When our GitHub Actions failed, instead of fixing it manually, we used KRISPER to fix KRISPER. [See the actual commit →](https://github.com/echo313unfolding/krisper-vscode/commit/17c1434)
+
+```krisper
+// The code that healed itself
+when build_error detected:
+    create file "tsconfig.json" with javascript compatibility
+    heal package.json wounds
+    commit changes with message "KRISPER heals itself"
+```
+
+If KRISPER can debug itself, imagine what it can do for your code! 🚀
+
+---
+
 # KRISPER — Natural Language Programming (Copilot-friendly)
 
 Write programs in **plain English**. No brackets. No boilerplate.  

@@ -1,4 +1,4 @@
-name: Build KRISPER Extension
+name: KRISPER Self-Healing Build
 on: [push, pull_request]
 jobs:
   build:

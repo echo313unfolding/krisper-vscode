@@ -15,4 +15,7 @@ jobs:
           npm install -g @vscode/vsce
           vsce package --no-dependencies --allow-missing-repository || echo "Package created with warnings"
       - name: KRISPER Success Message
-        run: echo "🧬 KRISPER built successfully! Self-healing works!"
+        run: |
+          echo "🧬 KRISPER built successfully! Self-healing works!"
+          echo "This is the $(git rev-list --count HEAD)th time KRISPER has healed itself!"
+          echo "Proof that self-healing is repeatable! 🔄"

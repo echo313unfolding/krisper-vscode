@@ -134,7 +134,9 @@
         ]
     },
     "scripts": {
-        "vscode:prepublish": "echo 'No compilation needed'"
+        "vscode:prepublish": "echo 'No compilation needed'",
+        "compile": "echo 'No TypeScript compilation needed'",
+        "watch": "echo 'No watching needed'"
     },
     "repository": {
         "type": "git",
